@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0025B1481DEBBF81003B0213 /* StudentLocationOnMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0025B1471DEBBF81003B0213 /* StudentLocationOnMapViewController.swift */; };
 		006AFEAB1DE7639F00BCABDD /* ParseStudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AFEAA1DE7639F00BCABDD /* ParseStudentLocation.swift */; };
 		006AFEAD1DE7667A00BCABDD /* UdacityStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AFEAC1DE7667A00BCABDD /* UdacityStudent.swift */; };
 		006AFEAF1DE76AAC00BCABDD /* UdacityConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AFEAE1DE76AAC00BCABDD /* UdacityConvenience.swift */; };
@@ -50,7 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0025B1471DEBBF81003B0213 /* StudentLocationOnMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentLocationOnMapViewController.swift; sourceTree = "<group>"; };
 		006AFEAA1DE7639F00BCABDD /* ParseStudentLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStudentLocation.swift; sourceTree = "<group>"; };
 		006AFEAC1DE7667A00BCABDD /* UdacityStudent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityStudent.swift; sourceTree = "<group>"; };
 		006AFEAE1DE76AAC00BCABDD /* UdacityConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityConvenience.swift; sourceTree = "<group>"; };
@@ -185,7 +183,6 @@
 				006AFEB01DE77A6600BCABDD /* StudentLocationMapViewController.swift */,
 				00C124881DEB52D000DF696C /* StudentLocationTableViewController.swift */,
 				00C1248A1DEB6E8B00DF696C /* NewStudentLocationViewController.swift */,
-				0025B1471DEBBF81003B0213 /* StudentLocationOnMapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -371,7 +368,6 @@
 				006AFEAB1DE7639F00BCABDD /* ParseStudentLocation.swift in Sources */,
 				00C124891DEB52D000DF696C /* StudentLocationTableViewController.swift in Sources */,
 				006AFEB11DE77A6600BCABDD /* StudentLocationMapViewController.swift in Sources */,
-				0025B1481DEBBF81003B0213 /* StudentLocationOnMapViewController.swift in Sources */,
 				006AFEB51DEA150400BCABDD /* ParseStudentLocationConstants.swift in Sources */,
 				00ED08EE1DE0B8C10070E5DB /* AppDelegate.swift in Sources */,
 			);

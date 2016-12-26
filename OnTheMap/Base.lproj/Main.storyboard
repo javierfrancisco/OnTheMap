@@ -149,7 +149,7 @@
                                             <action selector="loginToTheApp:" destination="57M-EV-wB5" eventType="touchUpInside" id="Cku-hi-9pc"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Sinup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg4-GP-4eg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Singup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg4-GP-4eg">
                                         <rect key="frame" x="0.0" y="370" width="343" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="ITa-qX-Kxh"/>
@@ -323,7 +323,6 @@
                                                 <state key="normal" title="Submit"/>
                                                 <connections>
                                                     <action selector="submitAction:" destination="sU2-18-teM" eventType="touchUpInside" id="1RO-2v-n8g"/>
-                                                    <action selector="submitAction:" destination="dao-Ue-zgH" eventType="touchUpInside" id="hNU-dS-LpX"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -357,77 +356,11 @@
                         <outlet property="mapView" destination="G5z-5b-xHD" id="9QB-7x-mem"/>
                         <outlet property="viewLink" destination="cbJ-p0-ZHu" id="nHf-QO-dbI"/>
                         <outlet property="viewLocation" destination="GQ7-Zs-tQp" id="J9M-mW-MzF"/>
-                        <segue destination="dao-Ue-zgH" kind="presentation" identifier="onTheMapDetail" id="08D-eU-2BL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCC-gH-GlU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="609" y="-972"/>
-        </scene>
-        <!--Student Location On Map View Controller-->
-        <scene sceneID="Zh1-gO-iI7">
-            <objects>
-                <viewController storyboardIdentifier="onTheMapDetail" id="dao-Ue-zgH" customClass="StudentLocationOnMapViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oeB-FH-3cY"/>
-                        <viewControllerLayoutGuide type="bottom" id="ycY-zS-PNR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yuK-eC-HFG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2IF-wO-kTc">
-                                <rect key="frame" x="-4" y="70" width="383" height="597"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter a Link to Share Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gz4-Zb-gqJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="383" height="199"/>
-                                        <color key="backgroundColor" red="0.19278362390000001" green="0.3394526839" blue="0.54129713769999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kLy-5A-spb">
-                                        <rect key="frame" x="0.0" y="199" width="383" height="199"/>
-                                    </mapView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5zM-0a-2su">
-                                        <rect key="frame" x="0.0" y="398" width="383" height="199"/>
-                                        <state key="normal" title="Submit"/>
-                                        <connections>
-                                            <action selector="submitAction:" destination="dao-Ue-zgH" eventType="touchUpInside" id="WCJ-OT-qAN"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUz-SF-Y1Q">
-                                <rect key="frame" x="311" y="28" width="48" height="30"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="performCancelAction:" destination="sU2-18-teM" eventType="touchUpInside" id="ekI-ov-fTJ"/>
-                                    <action selector="performCancelAction:" destination="dao-Ue-zgH" eventType="touchUpInside" id="qpu-CZ-ghz"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.65473181009292603" green="0.68263673782348633" blue="0.71172624826431274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="2IF-wO-kTc" firstAttribute="top" secondItem="oeB-FH-3cY" secondAttribute="bottom" constant="50" id="26L-Wy-cVd"/>
-                            <constraint firstItem="2IF-wO-kTc" firstAttribute="leading" secondItem="yuK-eC-HFG" secondAttribute="leadingMargin" constant="-20" id="D3n-BX-taD"/>
-                            <constraint firstItem="FUz-SF-Y1Q" firstAttribute="top" secondItem="oeB-FH-3cY" secondAttribute="bottom" constant="8" id="DbZ-Oz-e2q"/>
-                            <constraint firstItem="FUz-SF-Y1Q" firstAttribute="trailing" secondItem="yuK-eC-HFG" secondAttribute="trailingMargin" id="ISj-9B-dwC"/>
-                            <constraint firstItem="ycY-zS-PNR" firstAttribute="top" secondItem="2IF-wO-kTc" secondAttribute="bottom" id="YBv-mc-qSt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2IF-wO-kTc" secondAttribute="trailing" constant="-20" id="saA-dJ-yCl"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="mapView" destination="kLy-5A-spb" id="m0A-Oq-OjL"/>
-                        <outlet property="mediaUrlTextField" destination="gz4-Zb-gqJ" id="HfO-0r-Ti5"/>
-                        <outlet property="submitButton" destination="5zM-0a-2su" id="7hS-W6-Y1M"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vg0-yN-6PB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1337" y="-973"/>
         </scene>
     </scenes>
     <resources>
