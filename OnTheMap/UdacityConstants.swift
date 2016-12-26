@@ -27,6 +27,8 @@ extension UdacityClient{
         static let SessionNew = "/session"
         
         static let User = "/users"
+        
+        static let StudentLocation = "/StudentLocation"
     }
     
     struct ParametersKeys {
@@ -50,5 +52,15 @@ extension UdacityClient{
         static let UserLastName = "last_name"
         static let UserFirstName = "first_name"
         static let UserKey = "key"
+    }
+    
+    
+    struct UdacityStudentKeys {
+        
+        
+        //User
+        static let firstname = "last_name"
+        static let lastname = "first_name"
+        static let uniquekey = "key"
     }
 }

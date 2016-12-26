@@ -56,7 +56,31 @@ extension ParseStudentLocationClient {
         static let UniqueKey = "uniqueKey"
         static let UpdateAd = "updatedAt"
     }
-
+    
+    struct RequestKey {
+        
+        static let ApplicationId = "X-Parse-Application-Id"
+        static let ApiKey = "X-Parse-REST-API-Key"
+    
+    }
+    
+    struct RequestValue {
+    
+        static let ApplicationId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
+        static let ApiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
+    }
+    
+    struct JSONBodyKeys {
+        static let UniqueKey = "uniqueKey"
+        static let FirstName = "firstName"
+        static let Lastname = "lastName"
+        static let MapString = "mapString"
+        static let MediaURL = "mediaURL"
+        static let Latitude = "latitude"
+        static let Longitude = "longitude"
+    }
+    
+    
 
 }
 

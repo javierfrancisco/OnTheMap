@@ -24,14 +24,7 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
         
         print("in viewDidLoad ")
         
-        let pinButton   = UIBarButtonItem(image: UIImage(named: "Pin"), style: UIBarButtonItemStyle.plain , target: self, action: #selector(StudentLocationMapViewController.createNewStudentLocation))
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(StudentLocationMapViewController.refreshMapView))
-        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(StudentLocationMapViewController.logout))
       
-
-        self.navigationItem.leftBarButtonItem = logoutButton
-        
-        navigationItem.rightBarButtonItems = [refreshButton, pinButton]
         
         
         
@@ -49,99 +42,13 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
         print("studentLocations count::: \(studentLocations.count)")
         if(studentLocations.count == 0){
             
-            loadStudentLocations()
+            //loadStudentLocations()
         
         }else{
         
             self.showStudentLocations(studentLocations: studentLocations)
         }
         
-    }
-    
-    
-    func refreshMapView(){
-        
-        print("in refreshMapView")
-        
-    }
-    
-    func logout(){
-        
-        print("in logout")
-        
-        UdacityClient.sharedInstance().logout(sessionId: ""){
-            success, errorString in
-            
-            performUIUpdatesOnMain {
-            
-                
-                if success{
-                       print("success>")
-                       self.showLoginView()
-                }else{
-                       print("error>")
-                       self.showErrorAlert("Error in Logout")
-                }
-                
-                
-            }
-        }
-        
-    }
-    
-    func showErrorAlert(_ error : String){
-        
-        let alert = UIAlertController(title: "", message: error, preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-        
-    }
-    
-    
-    func createNewStudentLocation(){
-    
-        let vc1 = self.storyboard!.instantiateViewController(withIdentifier: "NewStudentLocationViewController") as! NewStudentLocationViewController
-        
-        self.present(vc1, animated:true, completion: nil)
-    }
-    
-    func showLoginView(){
-        
-        let vc1 = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        
-        self.present(vc1, animated:true, completion: nil)
-    }
-    
-    
-    
-    
-    
-    func loadStudentLocations() {
-        
-        
-        ParseStudentLocationClient.sharedInstance().getStudentLocations(){ success, studentLocations , error in
-            
-              print("getStudentLocations call completed>")
-            
-                performUIUpdatesOnMain {
-                    if success {
-                        print("success> students found: \(studentLocations?.count)")
-                        
-                        //self.studentLocations = studentLocations!
-                        
-                        (UIApplication.shared.delegate as! AppDelegate).studentLocations.append(contentsOf: studentLocations!)
-                        
-                        self.showStudentLocations(studentLocations: studentLocations!)
-                    } else {
-                        print("error>")
-                        //self.showErrorAlert(errorString!)
-                    }
-                }
-            
-            }
-    
     }
     
     func showStudentLocations(studentLocations : [ParseStudentLocation]){
@@ -159,24 +66,31 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
             
             // Notice that the float values are being used to create CLLocationDegree values.
             // This is a version of the Double type.
-            let lat = CLLocationDegrees(studentLocation.latitude)
-            let long = CLLocationDegrees(studentLocation.longitude)
             
-            // The lat and long are used to create a CLLocationCoordinates2D instance.
-            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            if let lat = studentLocation.latitude, let long =  studentLocation.longitude {
+        
+                
+                
+                // The lat and long are used to create a CLLocationCoordinates2D instance.
+                let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+                
+                
+                if let first = studentLocation.firstName, let last = studentLocation.lastName, let mediaURL = studentLocation.mediaURL{
+                
+                
+                    // Here we create the annotation and set its coordiate, title, and subtitle properties
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = coordinate
+                    annotation.title = "\(first) \(last)"
+                    annotation.subtitle = mediaURL
+                    
+                    // Finally we place the annotation in an array of annotations.
+                    annotations.append(annotation)
+                }
+                
+            }
             
-            let first = studentLocation.firstName
-            let last = studentLocation.lastName
-            let mediaURL = studentLocation.mediaURL
             
-            // Here we create the annotation and set its coordiate, title, and subtitle properties
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = coordinate
-            annotation.title = "\(first) \(last)"
-            annotation.subtitle = mediaURL
-            
-            // Finally we place the annotation in an array of annotations.
-            annotations.append(annotation)
         }
         
         

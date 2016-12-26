@@ -138,12 +138,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OnTheMap/ParseStudentLocationClient.swift"
-            timestampString = "501884660.490168"
+            timestampString = "502776689.706419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "taskForGETMethod(_:parameters:completionHandlerForGET:)"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "saveParseStudentLocationService(parseStudentLocation:completionHandlerForStudentLocation:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -154,76 +154,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OnTheMap/ParseStudentLocationClient.swift"
-            timestampString = "501884660.490168"
+            timestampString = "502776689.706419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "taskForGETMethod(_:parameters:completionHandlerForGET:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/ParseStudentLocationClient.swift"
-            timestampString = "501884660.490168"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "convertDataWithCompletionHandler(_:completionHandlerForConvertData:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/ParseStudentLocationClient.swift"
-            timestampString = "501884660.490168"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
-            landmarkName = "taskForGETMethod(_:parameters:completionHandlerForGET:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/StudentLocationMapViewController.swift"
-            timestampString = "501988562.798417"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "loadStudentLocations()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OnTheMap/StudentLocationMapViewController.swift"
-            timestampString = "501988562.798417"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "loadStudentLocations()"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "taskForPOSTMethod(_:parameters:jsonBody:completionHandlerForPOST:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -249,44 +185,91 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OnTheMap/StudentLocationMapViewController.swift"
-            timestampString = "501986693.406524"
+            filePath = "OnTheMap/StudentLocationOnMapViewController.swift"
+            timestampString = "502424766.753713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "logout()"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnTheMap/StudentLocationOnMapViewController.swift"
+            timestampString = "502424766.753713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnTheMap/StudentLocationOnMapViewController.swift"
+            timestampString = "502424766.753713"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "StudentLocationOnMapViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "OnTheMap.StudentLocationMapViewController.logout () -&gt; ()"
+                  symbolName = "OnTheMap.StudentLocationOnMapViewController.mapView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.MKMapView&gt;"
                   moduleName = "OnTheMap"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zenkiu/Documents/Udacity/Projects/OnTheMap/OnTheMap/StudentLocationMapViewController.swift"
-                  timestampString = "501987557.425446"
+                  urlString = "file:///Users/zenkiu/Documents/Udacity/Projects/OnTheMap/OnTheMap/StudentLocationOnMapViewController.swift"
+                  timestampString = "502775481.851164"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "72"
-                  endingLineNumber = "72"
-                  offsetFromSymbolStart = "192">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "27">
                </Location>
                <Location
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "OnTheMap.StudentLocationMapViewController.(logout () -&gt; ()).(closure #1)"
+                  symbolName = "OnTheMap.StudentLocationOnMapViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; OnTheMap.StudentLocationOnMapViewController"
                   moduleName = "OnTheMap"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zenkiu/Documents/Udacity/Projects/OnTheMap/OnTheMap/StudentLocationMapViewController.swift"
-                  timestampString = "501987557.428403"
+                  urlString = "file:///Users/zenkiu/Documents/Udacity/Projects/OnTheMap/OnTheMap/StudentLocationOnMapViewController.swift"
+                  timestampString = "502775481.85754"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "152">
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1349">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OnTheMap.StudentLocationOnMapViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;OnTheMap.StudentLocationOnMapViewController&gt;"
+                  moduleName = "OnTheMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zenkiu/Documents/Udacity/Projects/OnTheMap/OnTheMap/StudentLocationOnMapViewController.swift"
+                  timestampString = "502775481.860472"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "1252">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -297,13 +280,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OnTheMap/StudentLocationMapViewController.swift"
-            timestampString = "501988562.798417"
+            filePath = "OnTheMap/StudentLocationOnMapViewController.swift"
+            timestampString = "502424766.753713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "showLoginView()"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "createStudentLocationInView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -313,13 +296,61 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OnTheMap/StudentLocationMapViewController.swift"
-            timestampString = "501987570.696585"
+            filePath = "OnTheMap/ParseStudentLocationClient.swift"
+            timestampString = "502776689.706419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "logout()"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "saveParseStudentLocationService(parseStudentLocation:completionHandlerForStudentLocation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnTheMap/TabBarController.swift"
+            timestampString = "502782275.104266"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "loadStudentLocations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnTheMap/TabBarController.swift"
+            timestampString = "502782864.044092"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "loadStudentLocations()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OnTheMap/TabBarController.swift"
+            timestampString = "502783031.139364"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "loadStudentLocations()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

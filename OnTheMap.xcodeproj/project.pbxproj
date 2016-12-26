@@ -28,6 +28,8 @@
 		00ED09241DE272C20070E5DB /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED09231DE272C20070E5DB /* UdacityClient.swift */; };
 		00ED09261DE273D20070E5DB /* UdacityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED09251DE273D20070E5DB /* UdacityConstants.swift */; };
 		00ED09281DE27BCD0070E5DB /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED09271DE27BCD0070E5DB /* GCDBlackBox.swift */; };
+		00EF448E1DF7D1DF00739147 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EF448D1DF7D1DF00739147 /* TabBarController.swift */; };
+		00F84AD51DEE6C33002B5705 /* MapBorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F84AD41DEE6C33002B5705 /* MapBorderedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		00ED09231DE272C20070E5DB /* UdacityClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 		00ED09251DE273D20070E5DB /* UdacityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityConstants.swift; sourceTree = "<group>"; };
 		00ED09271DE27BCD0070E5DB /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		00EF448D1DF7D1DF00739147 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		00F84AD41DEE6C33002B5705 /* MapBorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapBorderedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 		00ED091E1DE271D80070E5DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				00F84AD41DEE6C33002B5705 /* MapBorderedButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				00ED091B1DE270D70070E5DB /* LoginViewController.swift */,
+				00EF448D1DF7D1DF00739147 /* TabBarController.swift */,
 				006AFEB01DE77A6600BCABDD /* StudentLocationMapViewController.swift */,
 				00C124881DEB52D000DF696C /* StudentLocationTableViewController.swift */,
 				00C1248A1DEB6E8B00DF696C /* NewStudentLocationViewController.swift */,
@@ -353,11 +359,13 @@
 				00ED09241DE272C20070E5DB /* UdacityClient.swift in Sources */,
 				006AFEB71DEA180900BCABDD /* ParseStudentLocationConvenience.swift in Sources */,
 				006AFEAD1DE7667A00BCABDD /* UdacityStudent.swift in Sources */,
+				00EF448E1DF7D1DF00739147 /* TabBarController.swift in Sources */,
 				006AFEAF1DE76AAC00BCABDD /* UdacityConvenience.swift in Sources */,
 				00ED09261DE273D20070E5DB /* UdacityConstants.swift in Sources */,
 				00ED091C1DE270D70070E5DB /* LoginViewController.swift in Sources */,
 				006AFEB31DEA14D800BCABDD /* ParseStudentLocationClient.swift in Sources */,
 				00ED08F01DE0B8C10070E5DB /* ViewController.swift in Sources */,
+				00F84AD51DEE6C33002B5705 /* MapBorderedButton.swift in Sources */,
 				00C1248B1DEB6E8B00DF696C /* NewStudentLocationViewController.swift in Sources */,
 				00ED09281DE27BCD0070E5DB /* GCDBlackBox.swift in Sources */,
 				006AFEAB1DE7639F00BCABDD /* ParseStudentLocation.swift in Sources */,

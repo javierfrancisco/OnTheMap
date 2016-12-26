@@ -32,9 +32,27 @@ extension ParseStudentLocationClient {
             }
         
         }
+
+    }
+    
+    func saveParseStudentLocation( parseStudentLocation : ParseStudentLocation, completionHandlerForStudentLocation: @escaping (_ succes : Bool, _ errorString: String?) -> Void ) {
         
         
+        saveParseStudentLocationService(parseStudentLocation: parseStudentLocation){
+            success,  error in
+            
+            
+            if success {
+                
+                completionHandlerForStudentLocation(true, nil)
+                
+            }else{
+                
+                completionHandlerForStudentLocation(false,  "Error while saving Student Location")
+            }
+        }
         
+    
     }
     
 
