@@ -35,6 +35,15 @@ extension ParseStudentLocationClient {
         static let Username = "username"
         static let Password = "password"
         
+        static let Limit = "limit"
+        static let Order = "order"
+    }
+    
+    struct ParametersValues {
+        
+        static let Limit = "70"
+        static let Order = "-updatedAt"
+        
     }
     
     struct JSONResponseKeys {

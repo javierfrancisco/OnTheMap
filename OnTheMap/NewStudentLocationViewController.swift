@@ -206,19 +206,29 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
             performUIUpdatesOnMain {
                 if success {
                     print("success> saveParseStudentLocation: ")
-                    
-                    //self.goToInitialView()
+
                     self.cancelAction()
                     
                 } else {
                     print("error>")
-                    //self.showErrorAlert(errorString!)
+                    self.showErrorAlert(error!)
                 }
             }
             
         }
         
     }
+    
+    func showErrorAlert(_ error : String){
+        
+        let alert = UIAlertController(title: "", message: error, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

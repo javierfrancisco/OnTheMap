@@ -53,8 +53,12 @@ class StudentLocationTableViewController :  UITableViewController {
         let studentLocation = studentLocations[indexPath.row]
         
         // Set the studentLocation and image
-        cell.textLabel?.text = studentLocation.firstName
-        cell.imageView?.image = UIImage(named: "Pin")
+        if let firstName = studentLocation.firstName, let lastName = studentLocation.lastName{
+        
+            cell.textLabel?.text = "\(firstName) \(lastName)"
+            cell.imageView?.image = UIImage(named: "Pin")
+        }
+        
         
         return cell
         
@@ -63,11 +67,16 @@ class StudentLocationTableViewController :  UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-      //  let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+       
+        let studentLocation = studentLocations[indexPath.row]
+
         
-      //  detailController.meme = self.memes[indexPath.row]
-       // self.navigationController!.pushViewController(detailController, animated: true)
+        if let url = URL(string: studentLocation.mediaURL!) {
+            
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         
+        }
+ 
     }
 
     

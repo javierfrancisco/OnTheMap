@@ -20,8 +20,11 @@ class ParseStudentLocationClient : NSObject {
         
         let method = ParseStudentLocationClient.Methods.StudentLocation
         
+        let parameters = [ParseStudentLocationClient.ParametersKeys.Limit : ParseStudentLocationClient.ParametersValues.Limit,
+                          ParseStudentLocationClient.ParametersKeys.Order : ParseStudentLocationClient.ParametersValues.Order]
         
-        let _ = taskForGETMethod(method, parameters: [String:AnyObject]()){ (results, error) in
+        
+        let _ = taskForGETMethod(method, parameters: parameters as [String:AnyObject]){ (results, error) in
             
             func displayError(_ error: String){
                 

@@ -42,14 +42,17 @@ extension UdacityClient {
         //Client Side validation befor calling server
         validateLoginData(username: username!, password: password!){ success, error in
             
-            func displayError(_ error: String, errorDetail : String){
+            func displayError(_ error: String){
                 
-                print(errorDetail)
+                print(error)
+                
                 completionHandlerForAuth(false, error)
+                
             }
             
             if error != nil {
-                displayError( error! , errorDetail: error! )
+                displayError( error! )
+                return
             }
             
             if success {
@@ -69,14 +72,19 @@ extension UdacityClient {
                                 
                             }else {
                             
-                                displayError("Udacity User not Found", errorDetail: error!)
+                                displayError("Udacity User not Found")
                             }
                         
                         }
                         
                     }else{
                         
-                        displayError("Invalid Email or Password", errorDetail: error!)
+                        
+                        //print(";;;;; \(error)")
+                        
+                        //displayError("Invalid Email or Password", errorDetail: error)
+                        
+                        displayError(error!.localizedDescription)
                     }
                     
                 }

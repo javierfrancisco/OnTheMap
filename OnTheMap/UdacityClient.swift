@@ -104,7 +104,7 @@ class UdacityClient : NSObject{
 
     
     
-    func authenticateWithCredentialsInServer(username : String, password : String , completionHandlerForAuth: @escaping (_ success: Bool,  _ errorString: String?) -> Void){
+    func authenticateWithCredentialsInServer(username : String, password : String , completionHandlerForAuth: @escaping (_ success: Bool,  _ error: NSError?) -> Void){
     
         
         //Getting ready to call the server
@@ -117,12 +117,21 @@ class UdacityClient : NSObject{
             func displayError(_ error: String){
                 
                 print(error)
-                completionHandlerForAuth(false, "Login Failed")
+                let userInfo = [NSLocalizedDescriptionKey : error]
+                
+                completionHandlerForAuth(false, NSError(domain: "authenticateWithCredentialsInServer", code: 1, userInfo: userInfo))
             }
             
             if error != nil {
                 
-                displayError("Response returned an error")
+                if(error!.localizedDescription.contains("403")){
+                        displayError("Invalid Email or Password")
+                    
+                    }else{
+                        displayError(error!.localizedDescription)
+                    }
+ 
+                return
             }
             
             
@@ -185,7 +194,10 @@ class UdacityClient : NSObject{
             
             /* GUARD: Was there an error? */
             guard (error == nil) else {
-                sendError("There was an error with your request: \(error)")
+                
+               // print("There was an error with your request: \(error!)")
+                
+                sendError(error!.localizedDescription)
                 return
             }
             
