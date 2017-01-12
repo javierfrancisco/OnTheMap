@@ -14,6 +14,7 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
 
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     
     var studentLocations = [ParseStudentLocation]()
@@ -56,6 +57,7 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
     
     func showStudentLocations(studentLocations : [ParseStudentLocation]){
     
+        activityIndicator.isHidden = false
         
         // We will create an MKPointAnnotation for each dictionary in "locations". The
         // point annotations will be stored in this array, and then provided to the map view.
@@ -100,6 +102,7 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
         // When the array is complete, we add the annotations to the map.
         self.mapView.addAnnotations(annotations)
     
+        activityIndicator.isHidden = true
     }
     
     

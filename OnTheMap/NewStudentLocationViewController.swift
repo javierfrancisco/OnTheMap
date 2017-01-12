@@ -83,9 +83,10 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
             let region = MKCoordinateRegionMake(location, span)
             self.mapView.setRegion(region, animated: false)
             //end zooming to the location
-            self.activityIndicator.isHidden = true
+            
             
             self.showLinkView()
+            self.activityIndicator.isHidden = true
             
         }
         

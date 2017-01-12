@@ -45,18 +45,24 @@
                                     <outlet property="delegate" destination="JFS-MW-XuY" id="eWM-rs-HWu"/>
                                 </connections>
                             </mapView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7xt-AV-MYG">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="7xt-AV-MYG" firstAttribute="centerY" secondItem="i40-PW-CRS" secondAttribute="centerY" id="8uS-MZ-YvH"/>
                             <constraint firstItem="TvJ-70-LBv" firstAttribute="top" secondItem="wNy-34-nLA" secondAttribute="bottom" id="HvI-Kp-YRR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wNy-34-nLA" secondAttribute="trailing" constant="-16" id="K8r-Rh-woa"/>
                             <constraint firstItem="wNy-34-nLA" firstAttribute="leading" secondItem="i40-PW-CRS" secondAttribute="leadingMargin" constant="-16" id="MX8-QT-Ibf"/>
                             <constraint firstItem="wNy-34-nLA" firstAttribute="top" secondItem="e9e-6b-nAz" secondAttribute="bottom" id="tHV-LP-bWg"/>
+                            <constraint firstItem="7xt-AV-MYG" firstAttribute="centerX" secondItem="i40-PW-CRS" secondAttribute="centerX" id="ujz-Fh-OS5"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Map" id="ehH-Gq-t9y"/>
                     <navigationItem key="navigationItem" id="1NO-eu-XSC"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="7xt-AV-MYG" id="x5G-1q-Oqz"/>
                         <outlet property="mapView" destination="wNy-34-nLA" id="pVM-AC-mYU"/>
                     </connections>
                 </viewController>
@@ -321,7 +327,7 @@
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-5b-xHD">
                                                         <rect key="frame" x="0.0" y="-1" width="383" height="197"/>
                                                     </mapView>
-                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-nD-REy">
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-nD-REy">
                                                         <rect key="frame" x="181" y="87.5" width="20" height="20"/>
                                                     </activityIndicatorView>
                                                 </subviews>
