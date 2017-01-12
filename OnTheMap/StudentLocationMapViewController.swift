@@ -40,7 +40,7 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
         
        // studentLocations = (UIApplication.shared.delegate as! AppDelegate).studentLocations
         
-        studentLocations = ParseStudentLocationClient.sharedInstance().studentLocations
+        //studentLocations = ParseStudentLocationClient.sharedInstance().studentLocations
        
         
         print("studentLocations count::: \(studentLocations.count)")
@@ -50,12 +50,14 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
         
         }else{
         
-            self.showStudentLocations(studentLocations: studentLocations)
+            self.showStudentLocations()
         }
         
     }
     
-    func showStudentLocations(studentLocations : [ParseStudentLocation]){
+    func showStudentLocations(){
+        
+        self.studentLocations = ParseStudentLocationClient.sharedInstance().studentLocations
     
         activityIndicator.isHidden = false
         

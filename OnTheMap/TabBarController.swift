@@ -113,25 +113,19 @@ class TabBarController: UITabBarController  {
                 if success {
                     print("success> students found: \(studentLocations?.count)")
                     
-                    //self.studentLocations = studentLocations!
-                    
-                    //(UIApplication.shared.delegate as! AppDelegate).studentLocations.append(contentsOf: studentLocations!)
+       
                     
                     let v1 = self.viewControllers![0] as! StudentLocationMapViewController
-                    v1.showStudentLocations(studentLocations: studentLocations!)
+                    v1.showStudentLocations()
                     
                     
                     let v2 = self.viewControllers![1] as! StudentLocationTableViewController
-                    
-                    v2.studentLocations = studentLocations!
-                    
+
                     if let pinsTable = v2.pinsTableView  {
                         
                       pinsTable.reloadData()
                     }
-                   
-                    
-                    //self.showStudentLocations(studentLocations: studentLocations!)
+ 
                 } else {
                     print("error>")
                     self.showErrorAlert(error!)
