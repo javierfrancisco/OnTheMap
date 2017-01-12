@@ -37,7 +37,10 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
         
         super.viewWillAppear(animated)
         
-        studentLocations = (UIApplication.shared.delegate as! AppDelegate).studentLocations
+       // studentLocations = (UIApplication.shared.delegate as! AppDelegate).studentLocations
+        
+        studentLocations = ParseStudentLocationClient.sharedInstance().studentLocations
+       
         
         print("studentLocations count::: \(studentLocations.count)")
         if(studentLocations.count == 0){

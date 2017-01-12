@@ -15,6 +15,9 @@ class ParseStudentLocationClient : NSObject {
     // shared session
     var session = URLSession.shared
     
+    var studentLocations = [ParseStudentLocation]()
+
+    
     
     func getParseStudentLocationsFromUdacity(completionHandlerForParseStudent: @escaping (_ success: Bool, _ parseStudentLocations : [ParseStudentLocation]?,  _ errorString: String?) -> Void){
         

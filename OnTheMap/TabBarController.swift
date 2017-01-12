@@ -83,9 +83,11 @@ class TabBarController: UITabBarController  {
     
     func showLoginView(){
         
-        let vc1 = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        //let vc1 = self.storyboard!.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         
-        self.present(vc1, animated:true, completion: nil)
+        //self.present(vc1, animated:true, completion: nil)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     func showErrorAlert(_ error : String){
@@ -113,7 +115,7 @@ class TabBarController: UITabBarController  {
                     
                     //self.studentLocations = studentLocations!
                     
-                    (UIApplication.shared.delegate as! AppDelegate).studentLocations.append(contentsOf: studentLocations!)
+                    //(UIApplication.shared.delegate as! AppDelegate).studentLocations.append(contentsOf: studentLocations!)
                     
                     let v1 = self.viewControllers![0] as! StudentLocationMapViewController
                     v1.showStudentLocations(studentLocations: studentLocations!)

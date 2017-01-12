@@ -13,6 +13,7 @@ import Foundation
 
 extension ParseStudentLocationClient {
 
+    
 
     
     func getStudentLocations(completionHandlerForStudent: @escaping (_ success : Bool, _ studentLocations : [ParseStudentLocation]?, _ errorString:  String? ) -> Void){
@@ -23,6 +24,8 @@ extension ParseStudentLocationClient {
             
             
             if success {
+                
+                self.studentLocations = studentLocations!
             
                 completionHandlerForStudent(true, studentLocations, nil)
                 

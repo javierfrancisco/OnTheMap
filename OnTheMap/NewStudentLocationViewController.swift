@@ -24,6 +24,7 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let inputLocationText = "Enter your location here"
     let inputLinkText = "Enter a link to share here"
@@ -41,6 +42,9 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
     func showLocationInMap(){
     
         
+        //show the activity indicator
+        activityIndicator.isHidden = false
+        
         let address = locationTextField.text
         let geocoder = CLGeocoder()
         geocoder.geocodeAddressString(address!){ placemarks, error in
@@ -57,6 +61,7 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
             if error != nil {
                 
                 displayError(":::CLGeocoder sent an error")
+                self.activityIndicator.isHidden = true
                 return
             }
             
@@ -78,6 +83,7 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
             let region = MKCoordinateRegionMake(location, span)
             self.mapView.setRegion(region, animated: false)
             //end zooming to the location
+            self.activityIndicator.isHidden = true
             
             self.showLinkView()
             
