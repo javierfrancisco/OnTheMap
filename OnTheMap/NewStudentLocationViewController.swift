@@ -24,7 +24,7 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+   
     
     let inputLocationText = "Enter your location here"
     let inputLinkText = "Enter a link to share here"
@@ -37,13 +37,15 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
     var parseStudentLocation : ParseStudentLocation?
     var selectedPlacemark : CLPlacemark?
     
+    @IBOutlet weak var actInd: UIActivityIndicatorView!
     
  
     func showLocationInMap(){
     
+        print("in :: showLocationInMap")
         
         //show the activity indicator
-        activityIndicator.isHidden = false
+        self.actInd.startAnimating()
         
         let address = locationTextField.text
         let geocoder = CLGeocoder()
@@ -61,7 +63,7 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
             if error != nil {
                 
                 displayError(":::CLGeocoder sent an error")
-                self.activityIndicator.isHidden = true
+                self.actInd.stopAnimating()
                 return
             }
             
@@ -85,8 +87,9 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
             //end zooming to the location
             
             
+            self.actInd.stopAnimating()
             self.showLinkView()
-            self.activityIndicator.isHidden = true
+            
             
         }
         
@@ -111,6 +114,7 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
         
         print("in NewStudentLocationViewController_viewDidLoad")
         
+        
         prepareTextField(textField: locationTextField, defaultText: inputLocationText)
   
         
@@ -119,14 +123,18 @@ class NewStudentLocationViewController :  UIViewController, UITextFieldDelegate,
         
         self.subscribeToKeyboardNotifications()
         
+        
         showLocationView()
+        
         
     }
     
     func showLocationView(){
     
         viewLocation.isHidden = false
+        
         viewLink.isHidden = true
+        actInd.stopAnimating()
     }
     
     func showLinkView(){

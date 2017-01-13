@@ -57,8 +57,9 @@ class StudentLocationMapViewController : UIViewController, MKMapViewDelegate {
     
     func showStudentLocations(){
         
-        self.studentLocations = ParseStudentLocationClient.sharedInstance().studentLocations
-    
+        self.studentLocations = StudentData.sharedInstance().studentData!
+        
+        
         activityIndicator.isHidden = false
         
         // We will create an MKPointAnnotation for each dictionary in "locations". The

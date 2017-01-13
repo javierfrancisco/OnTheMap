@@ -274,13 +274,29 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y06-TZ-qPk">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLP-I3-Qna">
                                                 <rect key="frame" x="0.0" y="195.5" width="383" height="196"/>
-                                                <color key="backgroundColor" red="0.19278362393379211" green="0.33945268392562866" blue="0.54129713773727417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y06-TZ-qPk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="383" height="196"/>
+                                                        <color key="backgroundColor" red="0.19278362393379211" green="0.33945268392562866" blue="0.54129713773727417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PSZ-Za-cz0">
+                                                        <rect key="frame" x="181" y="87.5" width="20" height="20"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </activityIndicatorView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="y06-TZ-qPk" secondAttribute="trailing" id="BME-Pt-VRw"/>
+                                                    <constraint firstAttribute="bottom" secondItem="y06-TZ-qPk" secondAttribute="bottom" id="D3Y-t5-JDP"/>
+                                                    <constraint firstItem="y06-TZ-qPk" firstAttribute="top" secondItem="sLP-I3-Qna" secondAttribute="top" id="MA2-Rc-CN4"/>
+                                                    <constraint firstItem="y06-TZ-qPk" firstAttribute="leading" secondItem="sLP-I3-Qna" secondAttribute="leading" id="QVx-Vg-ESL"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mnq-ak-InM">
                                                 <rect key="frame" x="0.0" y="391.5" width="383" height="195.5"/>
                                                 <subviews>
@@ -327,18 +343,13 @@
                                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="G5z-5b-xHD">
                                                         <rect key="frame" x="0.0" y="-1" width="383" height="197"/>
                                                     </mapView>
-                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-nD-REy">
-                                                        <rect key="frame" x="181" y="87.5" width="20" height="20"/>
-                                                    </activityIndicatorView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstItem="kSA-nD-REy" firstAttribute="centerY" secondItem="Uv3-PS-pxa" secondAttribute="centerY" id="2cZ-Um-tC0"/>
                                                     <constraint firstItem="G5z-5b-xHD" firstAttribute="leading" secondItem="Uv3-PS-pxa" secondAttribute="leading" id="YjD-W8-Bkm"/>
                                                     <constraint firstAttribute="trailing" secondItem="G5z-5b-xHD" secondAttribute="trailing" id="b3q-hL-kwY"/>
                                                     <constraint firstAttribute="bottom" secondItem="G5z-5b-xHD" secondAttribute="bottom" id="off-9n-i54"/>
                                                     <constraint firstItem="G5z-5b-xHD" firstAttribute="top" secondItem="Uv3-PS-pxa" secondAttribute="top" constant="-1" id="rcX-CN-zk5"/>
-                                                    <constraint firstItem="kSA-nD-REy" firstAttribute="centerX" secondItem="Uv3-PS-pxa" secondAttribute="centerX" id="toq-YN-dcM"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OFh-Aq-K7P">
@@ -374,7 +385,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BY7-6v-CXV"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="kSA-nD-REy" id="AKS-Ws-pnC"/>
+                        <outlet property="actInd" destination="PSZ-Za-cz0" id="Rer-Np-WBc"/>
                         <outlet property="linkTextField" destination="n6J-Pj-ngv" id="IKh-Bd-1Rh"/>
                         <outlet property="locationTextField" destination="y06-TZ-qPk" id="aat-o2-ipw"/>
                         <outlet property="mapView" destination="G5z-5b-xHD" id="9QB-7x-mem"/>

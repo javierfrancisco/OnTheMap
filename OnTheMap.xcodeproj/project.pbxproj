@@ -14,6 +14,7 @@
 		006AFEB31DEA14D800BCABDD /* ParseStudentLocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AFEB21DEA14D800BCABDD /* ParseStudentLocationClient.swift */; };
 		006AFEB51DEA150400BCABDD /* ParseStudentLocationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AFEB41DEA150400BCABDD /* ParseStudentLocationConstants.swift */; };
 		006AFEB71DEA180900BCABDD /* ParseStudentLocationConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006AFEB61DEA180900BCABDD /* ParseStudentLocationConvenience.swift */; };
+		00890BA11E286C350042310A /* StudentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00890BA01E286C350042310A /* StudentData.swift */; };
 		00C124891DEB52D000DF696C /* StudentLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C124881DEB52D000DF696C /* StudentLocationTableViewController.swift */; };
 		00C1248B1DEB6E8B00DF696C /* NewStudentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C1248A1DEB6E8B00DF696C /* NewStudentLocationViewController.swift */; };
 		00ED08EE1DE0B8C10070E5DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00ED08ED1DE0B8C10070E5DB /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		006AFEB21DEA14D800BCABDD /* ParseStudentLocationClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStudentLocationClient.swift; sourceTree = "<group>"; };
 		006AFEB41DEA150400BCABDD /* ParseStudentLocationConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStudentLocationConstants.swift; sourceTree = "<group>"; };
 		006AFEB61DEA180900BCABDD /* ParseStudentLocationConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseStudentLocationConvenience.swift; sourceTree = "<group>"; };
+		00890BA01E286C350042310A /* StudentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentData.swift; sourceTree = "<group>"; };
 		00C124881DEB52D000DF696C /* StudentLocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentLocationTableViewController.swift; sourceTree = "<group>"; };
 		00C1248A1DEB6E8B00DF696C /* NewStudentLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewStudentLocationViewController.swift; sourceTree = "<group>"; };
 		00ED08EA1DE0B8C10070E5DB /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 				006AFEB21DEA14D800BCABDD /* ParseStudentLocationClient.swift */,
 				006AFEB41DEA150400BCABDD /* ParseStudentLocationConstants.swift */,
 				006AFEAA1DE7639F00BCABDD /* ParseStudentLocation.swift */,
+				00890BA01E286C350042310A /* StudentData.swift */,
 			);
 			name = Parse;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				006AFEB11DE77A6600BCABDD /* StudentLocationMapViewController.swift in Sources */,
 				006AFEB51DEA150400BCABDD /* ParseStudentLocationConstants.swift in Sources */,
 				00ED08EE1DE0B8C10070E5DB /* AppDelegate.swift in Sources */,
+				00890BA11E286C350042310A /* StudentData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

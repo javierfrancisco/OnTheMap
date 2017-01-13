@@ -25,7 +25,7 @@ class StudentLocationTableViewController :  UITableViewController {
         super.viewDidLoad()
         
         print("in StudentLocationTableViewController viewDidLoad ")
-        self.studentLocations = ParseStudentLocationClient.sharedInstance().studentLocations
+        self.studentLocations = StudentData.sharedInstance().studentData!
        
         
     }

@@ -113,7 +113,7 @@ class TabBarController: UITabBarController  {
                 if success {
                     print("success> students found: \(studentLocations?.count)")
                     
-       
+                    StudentData.sharedInstance().studentData = studentLocations
                     
                     let v1 = self.viewControllers![0] as! StudentLocationMapViewController
                     v1.showStudentLocations()

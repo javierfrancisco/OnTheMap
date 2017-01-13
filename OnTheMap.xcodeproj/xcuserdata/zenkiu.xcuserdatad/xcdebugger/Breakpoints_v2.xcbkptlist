@@ -425,11 +425,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OnTheMap/NewStudentLocationViewController.swift"
-            timestampString = "505877154.706927"
+            timestampString = "505965151.198646"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "showLocationInMap()"
             landmarkType = "7">
          </BreakpointContent>
